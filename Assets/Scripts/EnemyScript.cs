@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    private GameManager gameManager;
     private EnemyFormation formation;
-
+    public int scoreValue;
     // Start is called before the first frame update
     void Start()
     {
         formation = GetComponentInParent<EnemyFormation>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -19,16 +21,15 @@ public class EnemyScript : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "LeftBoundary")
+        if (collision.gameObject.tag == "SideBoundary")
         {
             formation.movingSide = false;
             formation.SetDestinationAndMoveDown();
         }
-        if (collision.gameObject.tag == "RightBoundary")
+        if(collision.gameObject.tag == "Boundaries" || collision.gameObject.tag == "Player")
         {
-            formation.movingSide = false;
-            formation.SetDestinationAndMoveDown();
-
+            
+            gameManager.RestartGame();
         }
     }
 }

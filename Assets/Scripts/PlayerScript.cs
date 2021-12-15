@@ -25,7 +25,8 @@ public class PlayerScript : MonoBehaviour
     }
     public void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        Vector3 offset = new Vector3(0, 0.5f, 0);
+        GameObject bullet = Instantiate(bulletPrefab, transform.position + offset, Quaternion.identity);
     }
 
 
