@@ -21,7 +21,8 @@ public class EnemyScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "LeftBoundary")
         {
-
+            formation.movingSide = false;
+            formation.SetDestinationAndMoveDown();
         }
         if (collision.gameObject.tag == "RightBoundary")
         {

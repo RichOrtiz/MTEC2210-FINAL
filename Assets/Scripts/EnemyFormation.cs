@@ -8,7 +8,7 @@ public class EnemyFormation : MonoBehaviour
     public bool movingSide;
     public Vector3 destination;
     public float speed = 2;
-
+    private float descendSpeed = 2; 
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +35,7 @@ public class EnemyFormation : MonoBehaviour
     }
     public void MoveDown()
     {
-        transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * speed);
+        transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * descendSpeed);
         if(transform.position == destination)
         {
             movingDown = false;
