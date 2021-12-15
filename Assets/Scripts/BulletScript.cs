@@ -24,6 +24,11 @@ public class BulletScript : MonoBehaviour
             gameManager.IncreaseScore(collision.gameObject.GetComponent<EnemyScript>().scoreValue);
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(collision.gameObject);
+            gameManager.RestartGame();
+        }
         Destroy(gameObject);
     }
 }
