@@ -5,12 +5,19 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     private GameManager gameManager;
+
     public float speed;
     private float mod;
     public bool isPlayerBullet;
-    // Start is called before the first frame update
+
+    
+    //private EnemyFormation enemyFormation;
+
+    
     void Start()
     {
+        
+        //enemyFormation = GameObject.Find("EnemyFormation").GetComponent<EnemyFormation>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         if (isPlayerBullet)
         {
@@ -22,7 +29,7 @@ public class BulletScript : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         transform.Translate(0, speed * Time.deltaTime * mod, 0);
@@ -32,6 +39,8 @@ public class BulletScript : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
             gameManager.IncreaseScore(collision.gameObject.GetComponent<EnemyScript>().scoreValue);
+            
+            //enemyFormation.PlayEnemyDeathAudio();
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Player")

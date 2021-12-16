@@ -13,6 +13,8 @@ public class EnemyFormation : MonoBehaviour
     private float timeTillFire;
     public float fireDelay = 0;
 
+    //public AudioSource audioSource;
+    //public AudioClip deathClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,10 @@ public class EnemyFormation : MonoBehaviour
             timeTillFire = fireDelay;
         }
     }
+    /*public void PlayEnemyDeathAudio()
+    {
+        audioSource.PlayOneShot(deathClip);
+    }*/
     public void EnemyShoot()
     {
         int numberofEnemies = GetComponentsInChildren<EnemyScript>().Length;
