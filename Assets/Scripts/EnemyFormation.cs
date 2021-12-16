@@ -13,17 +13,19 @@ public class EnemyFormation : MonoBehaviour
     private float timeTillFire;
     public float fireDelay = 0;
 
+    private GameManager gameManager;
     //public AudioSource audioSource;
     //public AudioClip deathClip;
-    // Start is called before the first frame update
+
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         movingSide = true;
         timeTillFire = fireDelay;
         //destination = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (movingSide)
@@ -52,9 +54,13 @@ public class EnemyFormation : MonoBehaviour
     public void EnemyShoot()
     {
         int numberofEnemies = GetComponentsInChildren<EnemyScript>().Length;
+        if (numberofEnemies <= 0)
+        {
+            gameManager.Win();
+            return;
+        }
         int index = Random.Range(0, numberofEnemies);
         var enemyArray = GetComponentsInChildren<EnemyScript>();
-
         Vector3 bullPos = enemyArray[index].transform.position;
         Instantiate(bulletPrefab, bullPos, Quaternion.identity);
     }

@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip shootClip;
+
     // Start is called before the first frame update
     void Start()
     {
