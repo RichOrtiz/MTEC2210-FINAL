@@ -7,7 +7,7 @@ public class PlayerScript : MonoBehaviour
     public float speed = 5;
     public GameObject bulletPrefab;
     private float timeTillFire;
-    public float fireDelay = 1;
+    public float fireDelay = .5f;
 
     public AudioSource audioSource;
     public AudioClip shootClip;

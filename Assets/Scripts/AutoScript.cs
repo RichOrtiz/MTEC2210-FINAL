@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AutoScript : MonoBehaviour
 {
-    public float speed = 1;
+    public float speed = .05f;
     // Start is called before the first frame update
     void Start()
     {
