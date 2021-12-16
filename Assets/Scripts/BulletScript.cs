@@ -46,7 +46,7 @@ public class BulletScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(collision.gameObject);
-            gameManager.RestartGame();
+            gameManager.GameOver();
         }
         Destroy(gameObject);
     }
