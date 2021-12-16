@@ -28,7 +28,6 @@ public class EnemyScript : MonoBehaviour
         }
         if(collision.gameObject.tag == "Boundaries" || collision.gameObject.tag == "Player")
         {
-            
             gameManager.RestartGame();
         }
     }

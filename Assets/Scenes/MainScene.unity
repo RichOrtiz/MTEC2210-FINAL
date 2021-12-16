@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 28102643}
   - component: {fileID: 28102645}
   - component: {fileID: 28102646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerCannon
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 133487599}
   - component: {fileID: 133487600}
   - component: {fileID: 133487601}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy05 (7)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -707,7 +707,7 @@ GameObject:
   - component: {fileID: 474527274}
   - component: {fileID: 474527275}
   - component: {fileID: 474527276}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy05 (2)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -852,7 +852,7 @@ GameObject:
   - component: {fileID: 474722256}
   - component: {fileID: 474722257}
   - component: {fileID: 474722258}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy05 (5)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 650437071}
   - component: {fileID: 650437072}
   - component: {fileID: 650437073}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy05 (6)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1176,7 +1176,7 @@ GameObject:
   - component: {fileID: 854673916}
   - component: {fileID: 854673917}
   - component: {fileID: 854673918}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy05 (4)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1363,6 +1363,8 @@ MonoBehaviour:
   movingSide: 0
   destination: {x: 0, y: 0, z: 0}
   speed: 2
+  bulletPrefab: {fileID: 2805047228873583739, guid: b8f477db8dda0af4ca081f9f1b650914,
+    type: 3}
 --- !u!1 &1038592612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,7 +1522,7 @@ GameObject:
   - component: {fileID: 1202787698}
   - component: {fileID: 1202787699}
   - component: {fileID: 1202787700}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy05 (3)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1862,7 +1864,7 @@ GameObject:
   - component: {fileID: 1939657716}
   - component: {fileID: 1939657717}
   - component: {fileID: 1939657718}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy05
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2073,7 +2075,7 @@ GameObject:
   - component: {fileID: 2060235712}
   - component: {fileID: 2060235713}
   - component: {fileID: 2060235714}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy05 (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2205,3 +2207,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 10
+--- !u!1001 &914219639874717549
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2805047228873583737, guid: b8f477db8dda0af4ca081f9f1b650914,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805047228873583737, guid: b8f477db8dda0af4ca081f9f1b650914,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805047228873583737, guid: b8f477db8dda0af4ca081f9f1b650914,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805047228873583737, guid: b8f477db8dda0af4ca081f9f1b650914,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805047228873583737, guid: b8f477db8dda0af4ca081f9f1b650914,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805047228873583737, guid: b8f477db8dda0af4ca081f9f1b650914,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805047228873583737, guid: b8f477db8dda0af4ca081f9f1b650914,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805047228873583737, guid: b8f477db8dda0af4ca081f9f1b650914,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805047228873583737, guid: b8f477db8dda0af4ca081f9f1b650914,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805047228873583737, guid: b8f477db8dda0af4ca081f9f1b650914,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805047228873583737, guid: b8f477db8dda0af4ca081f9f1b650914,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805047228873583739, guid: b8f477db8dda0af4ca081f9f1b650914,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyBullet
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8f477db8dda0af4ca081f9f1b650914, type: 3}

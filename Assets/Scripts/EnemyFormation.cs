@@ -8,11 +8,16 @@ public class EnemyFormation : MonoBehaviour
     public bool movingSide;
     public Vector3 destination;
     public float speed = 2;
-    private float descendSpeed = 2; 
+    private float descendSpeed = 2;
+    public GameObject bulletPrefab;
+    private float timeTillFire;
+    public float fireDelay = 3;
+
     // Start is called before the first frame update
     void Start()
     {
         movingSide = true;
+        timeTillFire = fireDelay;
         //destination = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
     }
 
@@ -27,7 +32,22 @@ public class EnemyFormation : MonoBehaviour
         {
             MoveDown();
         }
+        
+        if (timeTillFire > 0)
+        {
+            timeTillFire -= Time.deltaTime;
+        }
+        else
+        {
+            EnemyShoot();
+            timeTillFire = fireDelay;
+        }
     }
+    public void EnemyShoot()
+    {
+        Instantiate(bulletPrefab, Vector3.zero, Quaternion.identity);
+    }
+
     public void SetDestinationAndMoveDown()
     {
         destination = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
