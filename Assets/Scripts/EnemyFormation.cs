@@ -11,7 +11,7 @@ public class EnemyFormation : MonoBehaviour
     private float descendSpeed = 2;
     public GameObject bulletPrefab;
     private float timeTillFire;
-    public float fireDelay = 3;
+    public float fireDelay = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +45,12 @@ public class EnemyFormation : MonoBehaviour
     }
     public void EnemyShoot()
     {
-        Instantiate(bulletPrefab, Vector3.zero, Quaternion.identity);
+        int numberofEnemies = GetComponentsInChildren<EnemyScript>().Length;
+        int index = Random.Range(0, numberofEnemies);
+        var enemyArray = GetComponentsInChildren<EnemyScript>();
+
+        Vector3 bullPos = enemyArray[index].transform.position;
+        Instantiate(bulletPrefab, bullPos, Quaternion.identity);
     }
 
     public void SetDestinationAndMoveDown()
