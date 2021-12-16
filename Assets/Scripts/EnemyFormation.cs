@@ -11,7 +11,7 @@ public class EnemyFormation : MonoBehaviour
     private float descendSpeed = 2;
     public GameObject bulletPrefab;
     private float timeTillFire;
-    public float fireDelay = 1;
+    public float fireDelay = 0;
 
     // Start is called before the first frame update
     void Start()
