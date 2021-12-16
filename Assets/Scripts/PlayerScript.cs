@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         float xMove = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-
+        
         transform.Translate(xMove, 0, 0);
         if (Input.GetKeyDown(KeyCode.Space))
         {
