@@ -7,7 +7,7 @@ public class EnemyFormation : MonoBehaviour
     public bool movingDown;
     public bool movingSide;
     public Vector3 destination;
-    public float speed = .2f;
+    public float speed = .5f;
     private float descendSpeed = 1;
     public GameObject bulletPrefab;
     private float timeTillFire;
